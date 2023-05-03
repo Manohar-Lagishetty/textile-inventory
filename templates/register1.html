@@ -1,0 +1,69 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}Register page{% endblock %}
+
+{% block content %}
+
+<main class="main-container-register">
+    <section class="register-section">
+        <div class="register-container">
+            <h1 class="h1-register">Register Page</h1>
+        </div>
+        <div class="error-register">
+            {%if error1%}
+            <h3>{{error1}}</h3>
+            {% endif %}
+
+            {%if error%}
+            <h4>{{error}}</h4>
+            {% endif %}
+        </div>
+
+        <div class="register-form-container">
+            <form  action="register" method="POST" action = "{% url 'register1'%}">
+                <div class="user-details">
+                    {% csrf_token %}
+                    <div class="input-label">
+                        <label for="">Username:</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="usernamee" name = "username" placeholder="Enter Your Username" Required>
+                    </div>
+                    <div class="input-label">
+                        <label for="">First Name:</label>
+                    </div>
+                    <div class = "input-box">
+                        <input type="text" id="fname" name = "fname"placeholder="Enter your first name" Required>
+                    </div>
+                    <div class="input-label">
+                        <label for="">last Name:</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="lname" name = "lname" placeholder="Enter your last name" Required>
+                    </div>
+                    <div class="input-label">
+                        <label for="">Gmail:</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" name = "email" placeholder="Enter your email id" Required>
+                    </div>
+                    <div class="input-label">
+                        <label for="">Password:</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="pass11" name = "pass1" placeholder="Emter your password" Required>
+                    </div>
+                    <div class="input-label">
+                        <label for="">Confirm Password:</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="pass22" name = "pass2" placeholder="confirm your password" Required>
+                    </div class="signup-button">
+                    <button type=submit id = "signupid">SignUP</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}

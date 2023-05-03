@@ -1,0 +1,79 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}empadd{% endblock %}
+
+{% block content %}
+<main class="main-container-add-emp">
+        <div>
+            <h1 class="h1-add-employee">Add Employee</h1>
+        </div>
+        <div class = "employee-add-details">
+            {%if empaddnote%}
+            <h4>{{empaddnote}}</h4>
+            {% endif %}
+        </div>
+        <div class="employee-add-container">
+            <form method="POST" action="{% url 'empadd.html' %}">
+                <div class="employee-add-details">
+                    {% csrf_token %}
+                    <div class = "input-emp-label">
+                        <label>Emp-ID:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Emp-Id" name = "Emp_Id_name" placeholder="Enter Your Employee Id" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Emp-Name:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empname-Id" name = "Empname_name" placeholder="Enter Employee Name" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Last Name:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Emplname-Id" name = "Emplname_name" placeholder="Enter Employee Last name" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Designation:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "EmpDesignation-Id" name = "EmpDesignation_name" placeholder="Enter Employee Designation" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Contact No:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "EmpContactNo-Id" name = "EmpContactNo_name" placeholder="Enter Employee Contact Number" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Employee Joining Date:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = date id= "Empjoindate-Id" name = "Empjoindate_name" placeholder="Select Joinin Date" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Employee Salary:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empsalary-Id" name = "Empsalary_name" placeholder="Select Employee Salary" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label>Employee Gmai:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empgmail-Id" name = "Empgmail_name" placeholder="Select Employee Gmail" Required>
+                    </div>
+                    <div class="upload-button">
+                    <button type="submit">Upload</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        
+        
+    </section>
+</main>
+{% endblock %}

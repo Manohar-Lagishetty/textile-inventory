@@ -1,0 +1,58 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}empretrive{% endblock %}
+
+{% block content %}
+<div class="empretrive-container">
+    <div class = "empretrive-class"> 
+        <div class="empretrive-table">
+            <div class="empretrive-title">
+                <h1>Employee Details</h1>
+            </div>
+            <table>
+                <thead>
+                    <tr class="thead-tr">
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>Employee Last Name</th>
+                        <th>Designation</th>
+                        <th>Contact</th>
+                        <th>Joining Date</th>
+                        <th>Employee Salary</th>
+                        <th>Gmail Id</th>
+                        <th>Delete Data</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>   
+                <tbody>
+                    {% for emp in employee_details %}
+                    <tr>
+                        <td>{{ emp.empid}}</td>
+                        <td>{{ emp.empname}}</td>
+                        <td>{{ emp.emplname}}</td>
+                        <td>{{ emp.designation}}</td>
+                        <td>{{ emp.contact}}</td>
+                        <td>{{ emp.joiningdate}}</td>
+                        <td>{{ emp.Esalary}}</td>
+                        <td>{{ emp.Egmail}}</td>
+                        <td>
+                            <form method="post" action="{% url 'delete_data' emp.id %}">
+                                {% csrf_token %}
+                                <button type="submit" clas="retrive-button" value="Delete">Delete</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" action="{% url 'edit_data' emp.id %}">
+                                {% csrf_token %}
+                                <button type="submit" clas="retrive-button" value="Delete">Update</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
