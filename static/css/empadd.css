@@ -1,0 +1,54 @@
+
+
+.main-container-add-emp{
+    height: 83vh;
+}
+
+.h1-add-employee{
+    font-size: 40px;
+    font-weight: 500px;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    border-style: outset;;
+    border-width: 6px;
+    border-color: rgb(20, 91, 184);
+    color: rgb(20, 91, 184);
+    margin: 0px;
+    margin-left: 11rem;
+    margin-bottom: 2rem;
+}
+
+
+.employee-add-details{
+    padding-left: 6rem;
+}
+ 
+.input-emp-label{
+    margin-top: 15px;
+    font-weight: bold;
+    color: rgb(49, 47, 47);
+}
+
+.input-emp-box #Empjoindate-Id{
+    margin-top: 15px;
+    padding: 10px;
+    width: 31rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.employee-add-details h4{
+    font-size: 1rem;
+    margin-left: 4rem;
+    text-decoration: underline overline;
+    margin-top: 0px;
+    margin-left: 6.5rem;
+    margin-bottom: 0px;
+
+}
+
+.upload-button{
+    margin-bottom: 20px;
+}
+

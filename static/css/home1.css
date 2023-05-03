@@ -1,0 +1,30 @@
+
+.main-container {
+    height: 83vh;
+}
+
+.upperheadtitle-class{
+    color: rgb(20, 91, 184);
+    font-size: 180px;
+    margin: 0px;
+    padding-top: 8rem;
+    display: inline-block;
+}
+
+.headtitle-class {
+    color: rgb(37, 27, 27);
+    margin: 0px;
+    margin-left: 1.3rem;
+    font-size: 60px;
+
+}
+.section-home{
+    margin-left: 1rem;
+}
+
+.tagline-class{
+    font-family: monospace;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    font-size: 25px;
+}

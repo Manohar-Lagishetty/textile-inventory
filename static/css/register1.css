@@ -1,0 +1,65 @@
+.main-container-register{
+    height: 83vh;
+
+}
+
+.h1-register{
+    font-size: 60px;
+    font-weight: 500px;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    border-style: outset;;
+    border-width: 6px;
+    border-color: rgb(20, 91, 184);
+    color: rgb(20, 91, 184);
+    margin-left: 6rem;
+} 
+
+.user-details{
+    padding-left: 6rem;
+}
+
+.input-label{
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  max-width: 500px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  margin-left: 4px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(20, 91, 184);
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(26, 26, 58);
+}
+
+.error-register{
+    font-size: 15px;
+    margin-left: 4rem;
+    text-decoration: underline overline;
+    margin-top: 0px;
+    margin-left: 10rem;
+    margin-bottom: 0px;
+}

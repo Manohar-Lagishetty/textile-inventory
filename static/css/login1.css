@@ -1,0 +1,38 @@
+.main-container-login{
+    height: 83vh;
+}
+
+
+.h1-login{
+    font-size: 60px;
+    font-weight: 500px;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    border-style: outset;;
+    border-width: 6px;
+    border-color: rgb(20, 91, 184);
+    color: rgb(20, 91, 184);
+    margin-left: 5.5rem;
+    margin-top: 8rem;
+}
+
+
+.login-details{
+    padding-left: 6rem;
+}
+
+.login-label{
+    margin-top: 15px;
+}
+
+input[type="name"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  max-width: 500px;
+}
+
