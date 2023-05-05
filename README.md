@@ -1,5 +1,6 @@
 # Textile-inventory-Management
 A Inventory management website here a uneducated user can also easily register and login access with simple crisp user interface and manage their company employee salaries, raw material costings and profit margins along with daily,weekly, monthly and yearly reports to track their businesses.
+
 Front Page:- 
 ![Screenshot from 2023-05-05 19-09-37](https://user-images.githubusercontent.com/112895440/236478190-69c8bacd-ee2d-4f1d-b615-5f0faa78b853.png)
 Register Page:- 
