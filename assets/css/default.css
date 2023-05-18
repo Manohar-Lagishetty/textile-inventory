@@ -1,0 +1,31 @@
+.main1-container{
+    height: 83vh;
+}
+
+.upperheadtitle-class1{
+    color: rgb(20, 91, 184);
+    font-size: 50px;
+    margin: 0px;
+    padding-top: 8rem;
+    display: inline-block;
+}
+
+.upperheadtitle-class2{
+    color: rgb(20, 91, 184);
+    margin: 0px;
+    font-size: 180px;
+}
+
+.headtitle-class1{
+    color: rgb(80, 74, 74);
+    margin: 0px;
+    margin-left: 6rem;
+    font-size: 45px;
+}
+
+.tagline-class1{
+    font-size: 30px;
+    padding-top:30px ;
+    max-width: 70rem;
+    color: rgb(108, 105, 105);
+}

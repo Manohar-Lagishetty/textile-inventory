@@ -1,0 +1,21 @@
+
+.main-container-privacypolicy{
+    height: 83vh;
+}
+
+.title-privacypolicy-class{
+    margin-left: 26rem;
+    color: rgb(20, 91, 184);
+    border: solid 5px;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+
+}
+
+.content-privacypolicy-class{
+    max-width: 72rem;
+    text-align: justify;
+    font-size: 1.2rem;
+}

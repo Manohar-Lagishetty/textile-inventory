@@ -1,0 +1,43 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}login page{% endblock %}
+
+{% block content %}
+<main class="main-container-login">
+    <section class="login-section">
+        <div class="login-container">
+            <h1 class="h1-login">Login Page</h1>
+        </div>
+
+        {%if error%}
+        <h3{{error}}></h3>
+        {%endif%}
+        
+        <div class="form-container">
+            <form action="login" method="POST">
+                <div class="login-details">
+                    {% csrf_token %}
+                    <div class="login-label">
+                        <label> User Id:</label>
+                    </div>
+                    <div class="login-input">
+                        <input type = "name" placeholder="Username" id = "username" name = "username" Required>
+                    </div>
+                    <div class="login-label">
+                        <label> Password:</label>
+                    </div>
+                    <div class="login-input">
+                        <input type = "password" placeholder="Password" id = "pass1" name = "pass1" Required>
+                    </div>
+                    <div>
+                    <button type=submit>Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            
+        </div>
+    </section>
+</main>
+{% endblock %}

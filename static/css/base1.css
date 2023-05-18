@@ -1,0 +1,99 @@
+
+/* ---------------universal--------------- */
+
+body {
+    font-family: 'Courier New', monospace;
+    display: flex;
+    min-width: 100vh;
+    padding: 0px 25px 0px 25px;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-content-children {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(48, 46, 46);
+}
+
+/* -------------nav--------------- */
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links-right {
+    display: flex;
+    gap: 3rem;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.nav-links-right a:hover {
+    color: rgb(129, 127, 127);
+    font-weight: bold;
+}
+
+
+.nav-links-left {
+    display: flex;
+    gap: 2rem;
+    font-size: 22px;
+}
+
+.nav-links-left>#login-button>a {
+    padding: 14px 25px 14px 25px;
+    border-style: solid;
+    border-color: rgb(20, 91, 184);
+    border-radius: 40px;
+    color: rgb(20, 91, 184);
+    font-weight: bold;
+    transition: .5s;
+}
+
+.nav-links-left>#login-button>a:hover {
+    background: rgb(20, 91, 184);
+    color: azure;
+
+}
+
+.nav-links-left>#register-button>a {
+    padding: 18px 38px 18px 38px;
+    background-color: rgb(20, 91, 184);
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.nav-links-left>#register-button>a:hover{
+    background:rgb(4, 38, 83);
+    color: azure;
+}
+
+/* -------------footer------------ */
+
+.footer-section{
+    position: fixed;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}

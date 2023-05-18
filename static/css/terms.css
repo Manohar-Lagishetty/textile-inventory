@@ -1,0 +1,28 @@
+
+.main-container-terms{
+    height: 83vh;
+}
+
+.heading-terms-class{
+    margin-left: 26rem;
+    color: rgb(20, 91, 184);
+    border: solid 5px;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+.content-class-terms{
+    font-size: 1.1rem;
+    max-width: 72rem;
+    text-align: left;
+    text-align: justify;
+}
+
+.content-class-terms1{
+    font-size: 1.1rem;
+    max-width: 72rem;
+    text-align: left;
+    text-align: justify;
+}

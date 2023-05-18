@@ -1,0 +1,77 @@
+{% extends 'base1.html' %}
+{% load static %}
+
+{% block title %}empadd{% endblock %}
+
+{% block content %}
+<main class="main-container-add-emp">
+        <div class="h1-class-container">
+            <h1 class="h1-add-employee">Edit Employee</h1>
+        </div>
+        <div class = "employee-add-details">
+            {%if empeditnote%}
+            <h4>{{empeditnote}}</h4>
+            {% endif %}
+        </div>
+        <div class="employee-edit-container">
+            
+            <form method="POST" action="{% url 'update_data' my_emp_data.id %}">
+                <div class="employee-edit-details">
+                    {% csrf_token %}
+                    <div class = "input-emp-label">
+                        <label >Emp-ID:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Emp_Id" name = "Emp_Id_name" placeholder="Enter Your Employee Id" value = "{{my_emp_data.empid}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Emp-Name:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empname_Id" name = "Empname_name" placeholder="Enter Employee Name" value = "{{my_emp_data.empname}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Last Name:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Emplname_Id" name = "Emplname_name" placeholder="Enter Employee Last name" value = "{{my_emp_data.emplname}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Designation:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "EmpDesignation_Id" name = "EmpDesignation_name" placeholder="Enter Employee Designation" value = "{{ my_emp_data.designation}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Contact No:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "EmpContactNo_Id" name = "EmpContactNo_name" placeholder="Enter Employee Contact Number" value = "{{my_emp_data.contact}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Employee Joining Date:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type="date" id= "Empjoindate-Id" name = "Empjoindate_name" placeholder="Select Joining Date" value = "{{my_emp_data.joiningdate}}" required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Employee Salary:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empsalary_Id" name = "Empsalary_name" placeholder="Select Employee Salary" value = "{{my_emp_data.Esalary}}" Required>
+                    </div>
+                    <div class = "input-emp-label">
+                        <label >Employee Gmail:</label>
+                    </div>
+                    <div class = "input-emp-box">
+                        <input type = "text" id= "Empgmail_Id" name = "Empgmail_name" placeholder="Select Employee Gmail" value = "{{my_emp_data.Egmail}}" Required>
+                    </div>
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+        
+        
+    </section>
+</main>
+{% endblock %}

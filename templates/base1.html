@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{%static 'css/index.css'%}">
+        <style>
+            body {
+              background-image: url("{% static 'images/textile1.png' %}");
+            }
+          </style>
+    </head> 
+    <body>
+        <section class="nav-section">
+            <nav class=navbar-class>
+                <div class="navbar-container">
+                    <div class="nav-links-right">
+                        {% if request.resolver_match.url_name == 'update_data'%}
+                        {% block edit_content %}
+                        <p><a href="#">Work</a></p>
+                        <p><a href='#'>Employees</a></p>
+                        <p><a href="#">Salary calc</a></p>
+                        <p><a href="#">Daily Report</a></p>
+                        <p><a href="#">Live Statement</a></p>
+                        <p><a href='#'>Add Employees</a></p>
+                        {% endblock %}
+                        {% else %}
+                        {% block defaultt %}
+                        <p><a href="#">Work</a></p>
+                        <p><a href='empretrive.html'>Employees</a></p>
+                        <p><a href="#">Salary calc</a></p>
+                        <p><a href="#">Daily Report</a></p>
+                        <p><a href="#">Live Statement</a></p>
+                        <p><a href='empadd.html'>Add Employees</a></p>
+                        {% endblock %}
+                        {% endif %}
+                    </div>
+                    <div class="nav-links-left">
+                        <p><a href="#">English</a></p>
+                        {% if request.resolver_match.url_name == 'login1'%}
+                        {% block login_content %}
+                        <p id ="login-button"><a href='register1.html'>Register</a></p>
+                        <p id ="register-button"><a href='home1.html'>Home</a></p> 
+                        {% endblock %}
+
+                        {% elif request.resolver_match.url_name == 'register1' %}
+                        {% block register_content %}
+                        <p id ="login-button"><a href='login1'>Login</a></p>
+                        <p id ="register-button"><a href='home1.html'>Home</a></p>
+                        {% endblock %}
+                        
+                        {% elif request.resolver_match.url_name == "home1"%}
+                        {%block home_content %}
+                        <p id ="login-button"><a href='register1.html'>Register</a></p>
+                        <p id ="register-button"><a href='login1'>Login</a></p>
+                        {% endblock %}
+
+                        {% elif request.resolver_match.url_name == "default"%}
+                        {%block default_content %}
+                        <p id ="login-button"><a href='logout'>LogOut</a></p>
+                        {% comment %} <p id ="register-button"><a href='default.html'>Back</a></p> {% endcomment %}
+                        {% endblock %}
+
+                        {% else %}
+                        {% block default %}
+                        {% comment %} <p id ="login-button"><a href='logout'>LogOut</a></p> {% endcomment %}
+                        <p id ="register-button"><a href='default.html'>Back</a></p>
+                        {% endblock %}
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <main class="main-content-children">
+            {% block content %}{% endblock %}
+        </main>
+        
+        <section class="flooter-section">
+            <footer>
+                <div class="footer-container">
+                    <div>
+                        <p>&copy; 2023 textile-invetory-management. All rights reserved.</p>
+                    </div>
+                    <div class="footer-links">
+                        <p><a href="terms.html">Terms of Use</a></p>
+                        <p><a href="privacy_policy.html">Privacy Policy</a></p>
+                        <p><a href="#">Contact Us</a></p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <script src="" async defer></script>
+    </body>
+</html>
